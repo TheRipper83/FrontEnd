@@ -1,0 +1,46 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
