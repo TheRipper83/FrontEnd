@@ -6,19 +6,17 @@
     <link rel="stylesheet" href="layout.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
 </head> 
 
 <body> 
     <div style="padding: 20px;" class="mode" >
-        <b>Dark mode: </b>            
-        <span class="change">OFF</span>
+        <img class="change" src="sun.webp" alt="sun">
     </div>
     <div class="header">
-        <h1>Hossein Tayebi</h1>
-        <p style="color:#32a852 ;">My <b>profile</b>.</p>
+        <h1 style="color: white;">Hossein Tayebi</h1>
+        <p>My <b>profile</b>.</p>
     </div>
     <div class="navbar">
         <a href="#">About</a>
@@ -28,9 +26,13 @@
     </div>
     <div style="padding: 40px;">
         <h1 style="text-align: center;">About me</h1>
-        <div id="1" class="form">
+        <div class="form">
             <img style="width: 150px;" src="me.jpg" alt="me">
-            <p style="padding: 32px; font-size: large;">Hello I'm Hossein Tayebi and currently studying at Avans+ university. <br> My hobies are Playing guitar, piano, tennis and footbal. <br> </p>
+            <section>
+                <h1>Hello I'm Hossein Tayebi</h1    >
+                <p style="margin-left: 16px; font-size: large;"> currently studying software engineering at Avans+ university. <br>My hobies are Playing guitar, piano, tennis and footbal. <br> </p>
+            </section>
+            
         </div>
     </div>
     <div style="padding: 40px;">
@@ -61,6 +63,18 @@
         <h1>Thanks for visiting!</h1>
     </div>
     <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            $( "body" ).addClass( "dark" );
+            $(".about").removeClass("about"); 
+            $( ".change" ).text( "ON" );
+            $( "div.form").removeClass( "form" ).addClass("formDark");
+            $( "div.media").removeClass( "media" ).addClass("mediaDark");
+            $( "div.footer").removeClass( "footer" ).addClass("footerDark");
+            $("img.change").attr("src","moon.png");
+            $( "div.header").removeClass( "header" ).addClass("headerDark");
+            $( "div.navbar").removeClass( "navbar" ).addClass("navbarDark");
+        }
+        
         $( ".change" ).on("click", function() {
             if( $( "body" ).hasClass( "dark" )) {
                 $( "body" ).removeClass( "dark" );
@@ -68,6 +82,9 @@
                 $( "div.formDark").removeClass( "formDark" ).addClass("form");
                 $( "div.mediaDark").removeClass( "mediaDark" ).addClass("media");
                 $( "div.footerDark").removeClass( "footerDark" ).addClass("footer");
+                $( "div.headerDark").removeClass( "headerDark" ).addClass("header");
+                $( "div.navbarDark").removeClass( "navbarDark" ).addClass("navbar");
+                $("img.change").attr("src","sun.webp")
             } else {
                 $( "body" ).addClass( "dark" );
                 $(".about").removeClass("about"); 
@@ -75,6 +92,9 @@
                 $( "div.form").removeClass( "form" ).addClass("formDark");
                 $( "div.media").removeClass( "media" ).addClass("mediaDark");
                 $( "div.footer").removeClass( "footer" ).addClass("footerDark");
+                $("img.change").attr("src","moon.png")
+                $( "div.header").removeClass( "header" ).addClass("headerDark");
+                $( "div.navbar").removeClass( "navbar" ).addClass("navbarDark");
             }
         });
     </script>
