@@ -1,6 +1,6 @@
 body{
   text-align:center;
-  background-color: rgba(98, 194, 143, 0.721)
+  background-color: lightblue
   }
   img{
     height:140px;
@@ -16,10 +16,8 @@ body{
     cursor: pointer;
     border: 5px solid #555;
     border-radius: 40%;
-    width: 20px;
-    text-align: center;
-    padding: 5px;
-    margin-left: 8px;
+    width: 32px;
+    height: 32px;
   }
   .dark{
     background-color: #121212;
@@ -27,21 +25,37 @@ body{
   }
   .formDark {
     display: flex;
+    justify-content: center;
     background-color: #1F1B24;
     width: 100%;
     padding: 20px;
   }
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: lightgreen;
+    color: white;
+  }
+  .navbar {
+    display: flex;
+    background-color: #aaaaaaa5;
+  }
 
-
-.header {
+.headerDark {
   padding: 60px;
   text-align: center;
   background: #1abc9c;
   color: white;
 }
-.navbar {
+.navbarDark {
   display: flex;
   background-color: #333;
+}
+.navbarDark a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
 }
 .navbar a {
   color: white;
@@ -55,6 +69,7 @@ body{
 }
 .form {
   display: flex;
+  justify-content: center;
   background-color: #aaaaaaa5;
   width: 100%;
   padding: 20px;
@@ -87,9 +102,10 @@ body{
   background: #1F1B24;
 }
 @media screen and (max-width: 700px) {
-  .media, .navbar {   
+  .media, .navbar, .navbarDark, .mediaDark {   
     flex-direction: column;
   }
 }
-/* #1F1B24
-#121212 */
+
+
+
