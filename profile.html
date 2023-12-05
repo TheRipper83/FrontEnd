@@ -11,8 +11,11 @@
 </head> 
 
 <body> 
-    <div style="padding: 20px;" class="mode" >
-        <img class="change" src="sun.webp" alt="sun">
+    <div style="margin-right: 48px;margin-top: 16px;" class="mode" >
+        <div style="position: fixed;">
+            <img class="change" src="sun.webp" alt="sun">
+        </div>
+        
     </div>
     <div class="header">
         <h1 style="color: white;">Hossein Tayebi</h1>
@@ -37,9 +40,25 @@
     </div>
     <div style="padding: 40px;">
         <h1 style="text-align: center;">Projects</h1>
-        <div class="form">
+        <section class="scrollc">
+                <div>
+                    <img src="RE4.jpg" alt="RE4">
+                    <p>1-Resident evil 4 Remake (2023)</p>
+                </div>
+                <div>
+                    <img src="TLOU.jpg" alt="TLOU">
+                    <p>2-The last of us 1 Remake (2022)</p>
+                </div>
+                <div>
+                    <img src="Bioshock.jpg" alt="Bioshock">
+                    <p>3-Bioshock 1 Remastered (2020)</p>
+                </div>
+                <div>
+                    <img src="Darksouls.jpg" alt="Darksouls">
+                    <p>4-Dark Souls 3 (2016)</p>
+                </div>
             
-        </div>
+        </section>
     </div>
     <div style="padding: 40px;">
         <h1 style="text-align: center;">Social media</h1>
@@ -73,6 +92,7 @@
             $("img.change").attr("src","moon.png");
             $( "div.header").removeClass( "header" ).addClass("headerDark");
             $( "div.navbar").removeClass( "navbar" ).addClass("navbarDark");
+            $( "section.scrollc").removeClass( "scrollc" ).addClass("scrollcDark");
         }
         
         $( ".change" ).on("click", function() {
@@ -84,6 +104,7 @@
                 $( "div.footerDark").removeClass( "footerDark" ).addClass("footer");
                 $( "div.headerDark").removeClass( "headerDark" ).addClass("header");
                 $( "div.navbarDark").removeClass( "navbarDark" ).addClass("navbar");
+                $( "section.scrollcDark").removeClass( "scrollcDark" ).addClass("scrollc");
                 $("img.change").attr("src","sun.webp")
             } else {
                 $( "body" ).addClass( "dark" );
@@ -95,6 +116,7 @@
                 $("img.change").attr("src","moon.png")
                 $( "div.header").removeClass( "header" ).addClass("headerDark");
                 $( "div.navbar").removeClass( "navbar" ).addClass("navbarDark");
+                $( "section.scrollc").removeClass( "scrollc" ).addClass("scrollcDark");
             }
         });
     </script>
