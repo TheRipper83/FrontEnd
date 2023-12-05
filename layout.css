@@ -30,6 +30,14 @@ body{
     width: 100%;
     padding: 20px;
   }
+  .form {
+    display: flex;
+    justify-content: center;
+    background-color: #aaaaaaa5;
+    width: 100%;
+    padding: 20px;
+  }
+
   .header {
     padding: 60px;
     text-align: center;
@@ -57,6 +65,10 @@ body{
   text-decoration: none;
   text-align: center;
 }
+.navbarDark a:hover {
+  background-color: #ddd;
+  color: black;
+}
 .navbar a {
   color: white;
   padding: 14px 20px;
@@ -67,13 +79,7 @@ body{
   background-color: #ddd;
   color: black;
 }
-.form {
-  display: flex;
-  justify-content: center;
-  background-color: #aaaaaaa5;
-  width: 100%;
-  padding: 20px;
-}
+
 .media{
   display: flex;
   gap: 100px;
@@ -91,6 +97,37 @@ body{
   padding: 20px;
 }
 
+.scrollc {
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
+  gap: 50px;
+  background-color: #aaaaaaa5;
+  width: 100%;
+  padding: 20px;
+}
+.scrollcDark {
+  overflow-x: auto;
+  display: flex;
+  gap: 50px;
+  background-color: #1F1B24;
+  width: 100%;
+  padding: 20px;
+}
+
+.scrollc img{
+  width: 500px;
+  height: 400px;
+}
+.scrollcDark img{
+  width: 500px;
+  height: 400px;
+}
+.scrollcDark::-webkit-scrollbar {
+  display:none
+}
+
+
 .footer {
   padding: 20px;
   text-align: center;
@@ -102,7 +139,7 @@ body{
   background: #1F1B24;
 }
 @media screen and (max-width: 700px) {
-  .media, .navbar, .navbarDark, .mediaDark {   
+  .media, .navbar, .navbarDark, .mediaDark , .scrollc, .scrollcDark{   
     flex-direction: column;
   }
 }
